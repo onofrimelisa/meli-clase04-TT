@@ -15,7 +15,7 @@ public class Password {
         }
     }
 
-    public void setValue (String password) throws Exception {
+    public void setValue (String password) throws RuntimeException {
         Matcher matcher = this.pattern.matcher(password);
         if (!matcher.matches()) throw new RuntimeException("The given password doesn't match the regex.");
         this.password = password;

@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Testing passwords...");
+        System.out.println("Testing Passwords...");
         System.out.println("");
 
         System.out.println("Strong Passwords results: ");
@@ -16,5 +16,20 @@ public class Main {
         System.out.println("Intermediate Passwords results: ");
         Password validIntermediatePassword = new IntermediatePassword("validPassword1");
         Password invalidIntermediatePassword = new IntermediatePassword("invalidpassword1");
+
+        System.out.println();
+        System.out.println("Testing Geometric Figures...");
+        System.out.println("");
+
+        GeometricFigure figure1 = new Circle(2.5);
+        GeometricFigure figure2 = new Triangle(7.5, 8.4);
+        GeometricFigure figure3 = new Rectangle(85.5, 7.6);
+
+        System.out.println("Area of the figure 1: " + figure1.area());
+        System.out.println("Area of the figure 2: " + figure2.area());
+        System.out.println("Area of the figure 3: " + figure3.area());
+
+        GeometricFigure arr[] = {figure1, figure2, figure3};
+        System.out.println("The average area of the figures  is: " + GeometricFigureUtil.averageArea(arr));
     }
 }
